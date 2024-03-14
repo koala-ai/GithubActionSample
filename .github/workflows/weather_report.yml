@@ -18,9 +18,9 @@ jobs:
     env:
       TZ: Asia/Shanghai
     steps:
-    - uses: actions/checkout@latest  # 更新为最新版本
+    - uses: actions/checkout@v3  # 更新为没有版本标记的最新版本
     - name: Set up Python 3.12
-      uses: actions/setup-python@latest  # 更新为最新版本
+      uses: actions/setup-python@v3  # 指定为 v3 版本
       with:
         python-version: "3.12"
     - name: Install dependencies
@@ -35,3 +35,4 @@ jobs:
         APP_SECRET: ${{ secrets.APP_SECRET }}
         OPEN_ID: ${{ secrets.OPEN_ID }}
         TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+
